@@ -17,4 +17,4 @@ git clone https://github.com/cemsubasi/vim-config.git
 - Save and exit.
 - Re-open .vimrc file and open command mode of vim. 
 - Run :PlugInstall command.
-- Thats it.
+##### Thats it.
