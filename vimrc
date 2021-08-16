@@ -6,6 +6,10 @@ set completeopt=menuone,longest
 set shortmess+=c
 set background=dark
 set t_Co=256
+set autoindent
+set smartindent
+" set shell=/bin/fish
+filetype on
 syntax enable
 
 call plug#begin('~/.vim/plugged')
@@ -17,7 +21,6 @@ Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/jiangmiao/auto-pairs'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'vim-scripts/AutoComplPop'
-Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'airblade/vim-rooter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install'  }
@@ -222,3 +225,29 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#quickfix_enabled = 0
+
+"coc-react-refactor
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+let g:AutoPairsShortcutFastWrap = '<C-e>'
+
+"Rg vim shortcut
+
+nnoremap <leader>f :Rg<CR>
+
+"typescript filetype
+augroup SyntaxSettings
+	autocmd!
+	autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+augroup END
+"jsx
+" augroup SyntaxSettings
+" 	autocmd!
+" 	autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+" augroup END
+
+
+highlight Pmenusel ctermfg=14 ctermbg=16
+highlight Pmenu ctermfg=16 ctermbg=cyan
+highlight PmenuSbar ctermfg=16 ctermbg=cyan
