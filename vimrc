@@ -249,5 +249,11 @@ augroup END
 
 
 highlight Pmenusel ctermfg=14 ctermbg=16
-highlight Pmenu ctermfg=16 ctermbg=cyan
-highlight PmenuSbar ctermfg=16 ctermbg=cyan
+highlight Pmenu ctermfg=16 ctermbg=Cyan
+highlight PmenuSbar ctermfg=16 ctermbg=Cyan
+highlight Search ctermfg=14 ctermbg=242 guifg=Cyan guibg=Grey
+highlight typescriptFuncTypeArrow guifg=bg guibg=fg
+highlight typescriptPredefinedType guifg=bg guibg=fg
+highlight typescriptVariable guifg=bg guibg=fg
+highlight typescriptFuncType guifg=bg guibg=fg
+highlight typescriptFuncComma guifg=bg guibg=fg
